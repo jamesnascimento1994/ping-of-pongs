@@ -1,3 +1,20 @@
+h1 {
+    text-align: center;
+}
+
+.start-button {
+    display: block;
+    margin: auto;
+}
+
+#score1 {
+    display: none;
+}
+
+#score2 {
+    display: none;
+}
+
 #paddle1 {
     position: absolute;
     left: 0px;
@@ -19,6 +36,7 @@
 }
 
 #ball {
+    display: none;
     position: absolute;
     left: 690px;
     top: 510px;
@@ -29,6 +47,7 @@
 }
 
 #net {
+    display: none;
     border-left: 6px dotted black;
     height: 100%;
     left: 690px;
