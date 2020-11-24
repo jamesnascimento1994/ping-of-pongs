@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Nerko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Gloria+Hallelujah&family=Nerko+One&display=swap');
 
 h1 {
     text-align: center;
@@ -12,15 +12,17 @@ h1 {
     font-size: 70px;
     padding: 30px;
     border-radius: 15%;
-    font-family: 'Nerko One';
+    font-family: 'Nerko One', sans-serif;
 }
 
 #score1 {
     display: none;
+    font-family: 'Architects Daughter', sans-serif;
 }
 
 #score2 {
     display: none;
+    font-family: 'Architects Daughter', sans-serif;
 }
 
 #paddle1 {

@@ -120,7 +120,7 @@ window.setInterval(function show() {
 		) {
 			leftSpeedOfBall = -leftSpeedOfBall;
 		} else {
-			score1++;
+			score2++;
 			startBall();
 		}
 	}
@@ -132,7 +132,7 @@ window.setInterval(function show() {
 		) {
 			leftSpeedOfBall = -leftSpeedOfBall;
 		} else {
-			score2++;
+			score1++;
 			startBall();
 		}
 	}
