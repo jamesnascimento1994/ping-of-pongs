@@ -1,3 +1,4 @@
+let h1 = document.querySelector('.header')
 let startButton = document.querySelector('.start-button');
 console.log(startButton);
 startButton.addEventListener('click', startGame);
@@ -5,6 +6,8 @@ let net = document.querySelector('#net');
 let scoreOne = document.querySelector('#score1');
 let scoreTwo = document.querySelector('#score2');
 let theBall = document.querySelector('#ball');
+let resetButton = document.querySelector('.reset-button');
+resetButton.addEventListener('click', resetGame);
 let paddleHeight = 150;
 let paddleWidth = 30;
 let ballRadius = 25;
@@ -27,7 +30,14 @@ function startGame(e) {
 	startButton.style.display = 'none';
 	theBall.style.display = 'block';
 	net.style.display = 'block';
+	h1.style.fontSize = '40px';
+	resetButton.style.display = 'block';
 	startBall();
+}
+
+function resetGame(e) {
+	e.preventDefault();
+	document.location.href = "";
 }
 
 // 2 players

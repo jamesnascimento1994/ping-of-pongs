@@ -1,9 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Gloria+Hallelujah&family=Nerko+One&display=swap');
 
-h1 {
+body {
+    background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80");
+  color: #eee;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  animation: animation 100s linear infinite;
+}
+
+@keyframes animation {
+   100%{
+    background-position:0px -3000px;
+  }
+}
+
+.header {
     text-align: center;
     font-size: 80px;
     font-family: 'Gloria Hallelujah', sans-serif;
+    background-color: #ada996;
+  background-image: -webkit-linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+  background-image: linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+background-color: 100%;
+background-repeat: repeat;
+background-clip: text;
+-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 
 .start-button {
@@ -13,6 +37,15 @@ h1 {
     padding: 30px;
     border-radius: 15%;
     font-family: 'Nerko One', sans-serif;
+    background: #3c3b3f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #3c3b3f, #605c3c); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #3c3b3f, #605c3c);
+  transition: 1s;
+}
+
+.start-button:hover {
+    transform: scale(1.5);
+    transition: 1s;
 }
 
 #score1 {
@@ -52,14 +85,29 @@ h1 {
     top: 510px;
     width: 25px;
     height: 25px;
-    background-color: grey;
+    background: #f79d00; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #f79d00, #64f38c); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #f79d00, #64f38c);
     border-radius: 50%;
 }
 
 #net {
     display: none;
-    border-left: 6px dotted black;
-    height: 100%;
+    border-left: 6px dotted #FAFFD1;
+    height: 550px;
     left: 690px;
     position: fixed;
+}
+
+.reset-button {
+display: none;
+margin-top: 430px;
+margin-left: 635px;
+font-size: 20px;
+padding: 12px;
+border-radius: 15%;
+font-family: 'Nerko One', sans-serif;
+background: #3c3b3f; /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #3c3b3f, #605c3c); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #3c3b3f, #605c3c);
 }
