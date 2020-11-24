@@ -1,4 +1,5 @@
 let startButton = document.querySelector('.start-button');
+console.log(startButton);
 startButton.addEventListener('click', startGame);
 let net = document.querySelector('#net');
 let scoreOne = document.querySelector('#score1');
