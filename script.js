@@ -23,16 +23,31 @@ let leftSpeedOfBall = 0;
 let score1 = 0;
 let score2 = 0;
 
+function startTimer() {
+	let counter = 3;
+	setInterval(function() {
+		counter--;
+		if (counter >= 0) {
+			document.querySelector("#countdown").innerHTML = counter;
+		}
+		if (counter === 0) {
+			document.querySelector('#countdown').innerHTML = '';
+			clearInterval(counter);
+			theBall.style.display = 'block';
+			net.style.display = 'block';
+			scoreOne.style.display = 'block';
+			scoreTwo.style.display = 'block';
+			h1.style.fontSize = '40px';
+			resetButton.style.display = 'block';
+			startBall();
+		}
+	}, 1000);
+}
+
 function startGame(e) {
 	e.preventDefault();
-	scoreOne.style.display = 'block';
-	scoreTwo.style.display = 'block';
+	startTimer();
 	startButton.style.display = 'none';
-	theBall.style.display = 'block';
-	net.style.display = 'block';
-	h1.style.fontSize = '40px';
-	resetButton.style.display = 'block';
-	startBall();
 }
 
 function resetGame(e) {
@@ -43,6 +58,8 @@ function resetGame(e) {
 // 2 players
 
 function startBall() {
+	document.querySelector('#countdown').style.display = 'none';
+
 	topPositionOfBall = 510;
 	leftPositionOfBall = 820;
 

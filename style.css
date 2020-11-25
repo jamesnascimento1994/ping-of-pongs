@@ -48,6 +48,13 @@ background-clip: text;
     transition: 1s;
 }
 
+#countdown {
+    font-size: 200px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Nerko One', sans-serif;
+}
+
 #score1 {
     display: none;
     font-family: 'Architects Daughter', sans-serif;
