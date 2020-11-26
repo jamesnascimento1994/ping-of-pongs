@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Gloria+Hallelujah&family=Nerko+One&display=swap');
 
-body {
-    background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80");
+ body {
+    background-image: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80");
   color: #eee;
   perspective: 1000px;
   perspective-origin: 50% 50%;
@@ -37,8 +37,8 @@ background-clip: text;
     padding: 30px;
     border-radius: 15%;
     font-family: 'Nerko One', sans-serif;
-    background: #3c3b3f; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #3c3b3f, #605c3c); /* Chrome 10-25, Safari 5.1-6 */
+    background: #3c3b3f;
+  background: -webkit-linear-gradient(to bottom, #3c3b3f, #605c3c);
   background: linear-gradient(to bottom, #3c3b3f, #605c3c);
   transition: 1s;
 }
@@ -48,11 +48,50 @@ background-clip: text;
     transition: 1s;
 }
 
+#instruction-header {
+    display: block;
+    text-align: center;
+    font-family: 'Architects Daughter', sans-serif;
+    font-size: 40px;
+    background-color: #ada996;
+  background-image: -webkit-linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+  background-image: linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+background-color: 100%;
+background-repeat: repeat;
+background-clip: text;
+-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.instructions1 {
+    display: block;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.instructions2 {
+    display: block;
+    text-align: center;
+    font-family: sans-serif;
+}
+
 #countdown {
     font-size: 200px;
     display: flex;
     justify-content: center;
     font-family: 'Nerko One', sans-serif;
+    background-color: #3c3b3f;
+  background-image: -webkit-linear-gradient(to bottom, #3c3b3f, #605c3c);
+  background-image: linear-gradient(to bottom, #3c3b3f, #605c3c);
+  background-color: 100%;
+background-repeat: repeat;
+background-clip: text;
+-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 
 #score1 {
@@ -72,7 +111,7 @@ background-clip: text;
     width: 30px;
     height: 150px;
     background-color: black;
-    border-radius: 50%;
+    border-radius: 30%;
 }
 
 #paddle2 {
@@ -82,7 +121,7 @@ background-clip: text;
     width: 30px;
     height: 150px;
     background-color: darkgreen;
-    border-radius: 50%;
+    border-radius: 30%;
 }
 
 #ball {
@@ -92,8 +131,8 @@ background-clip: text;
     top: 510px;
     width: 25px;
     height: 25px;
-    background: #f79d00; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #f79d00, #64f38c); /* Chrome 10-25, Safari 5.1-6 */
+    background: #f79d00;
+  background: -webkit-linear-gradient(to bottom, #f79d00, #64f38c);
   background: linear-gradient(to bottom, #f79d00, #64f38c);
     border-radius: 50%;
 }
@@ -106,6 +145,13 @@ background-clip: text;
     position: fixed;
 }
 
+.winning-statement {
+    text-align: center;
+    font-size: 90px;
+    font-family: 'Nerko One', sans-serif;
+    color: black;
+}
+
 .reset-button {
 display: none;
 margin-top: 430px;
@@ -114,7 +160,7 @@ font-size: 20px;
 padding: 12px;
 border-radius: 15%;
 font-family: 'Nerko One', sans-serif;
-background: #3c3b3f; /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #3c3b3f, #605c3c); /* Chrome 10-25, Safari 5.1-6 */
+background: #3c3b3f;
+background: -webkit-linear-gradient(to bottom, #3c3b3f, #605c3c);
 background: linear-gradient(to bottom, #3c3b3f, #605c3c);
 }
