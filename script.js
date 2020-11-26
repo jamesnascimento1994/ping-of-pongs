@@ -1,7 +1,6 @@
-// all my elements
-let h1 = document.querySelector('.header')
+// all my global variables
+let h1 = document.querySelector('.header');
 let startButton = document.querySelector('.start-button');
-console.log(startButton);
 startButton.addEventListener('click', startGame);
 let instructionHeader = document.querySelector('#instruction-header');
 let instructions1 = document.querySelector('.instructions1');
@@ -68,6 +67,7 @@ function resetGame(e) {
 	document.location.href = "";
 }
 
+// The function to give the ball movement
 function startBall() {
 	document.querySelector('#countdown').style.display = 'none';
 
@@ -84,6 +84,7 @@ function startBall() {
 	topSpeedOfBall = Math.random() * 6 + 5;
 }
 
+// Keyboard functionality
 document.addEventListener('keydown', function (e) {
 	// W
 	if (e.keycode == 87 || e.which == 87) {
@@ -155,11 +156,12 @@ window.setInterval(function show() {
 		if (
 			topPositionOfBall > positionOfPaddle1 &&
 			topPositionOfBall < positionOfPaddle1 + paddleHeight
-		) {
+		) { // if the ball hits the paddle
 			leftSpeedOfBall = -leftSpeedOfBall;
 			let audio = new Audio('audio/punch.wav');
 			audio.play();
 		} else {
+			// if player 2 scores
 			score2++;
 			startBall();
 		}
@@ -169,18 +171,19 @@ window.setInterval(function show() {
 		if (
 			topPositionOfBall > positionOfPaddle2 &&
 			topPositionOfBall < positionOfPaddle2 + paddleHeight
-		) {
+		) { // if the ball hits the paddle
 			leftSpeedOfBall = -leftSpeedOfBall;
 			let audio = new Audio('audio/punch.wav');
 			audio.play();
 		} else {
+			// if player 1 scores
 			score1++;
 			startBall();
 		}
 	}
 
 	if (winningScore === score1) {
-		
+		// if player 1 wins
 		document.querySelector('.winning-statement').innerText = "Player 1 Wins!"
 		paddleOne.style.display = 'none';
 		paddleTwo.style.display = 'none';
@@ -193,6 +196,7 @@ window.setInterval(function show() {
 		let audio = new Audio('audio/applause6.mp3')
 		audio.play();
 	} else if (winningScore === score2) {
+		// if player 2 wins
 		document.querySelector('.winning-statement').innerText = 'Player 2 Wins!';
 		paddleOne.style.display = 'none';
 		paddleTwo.style.display = 'none';
